@@ -1,7 +1,8 @@
 import {Button, Card, Space} from "antd";
 import React from "react";
-import MangaGenres from "./genres";
+
 import {MangaList} from "../../../Data/MockApi";
+import {Link} from "react-router-dom";
 
 
 const MangaCard = (props) => {
@@ -9,23 +10,28 @@ const MangaCard = (props) => {
 
     return (
         <Card>
-            <p>{img}</p>
-            <p>{id}</p>
-            <h1>{name}</h1>
-            <h2>{author}</h2>
-            <h2>{artist}</h2>
-            <p>{year}</p>
-
             <Space direction="horizontal">
-                {genres.map((element) => (
-                    <MangaGenres
-                        {...element}
-                    />
-                ))}
+            <p>{img}</p>
+            <div>
+                <h1>{name}</h1>
+                <p>Сценарист: {author} <br/>
+                Художник: {artist}</p>
+                <p>год выпуска: {year}</p>
+                <p>Жанры:</p>
+                <Space direction="horizontal">
+                    {genres.map((element) => (
+                        <p>{element}</p>
+                    ))}
+                </Space>
+                <p>Описание:</p>
+                <p>{desc}</p>
+            </div>
+                <div>
+                    <Link to={"/MangaPage/" + id}>
+                        <Button>Подробнее</Button>
+                    </Link>
+                </div>
             </Space>
-
-            <p>desc</p>
-
         </Card>
     );
 };

@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 
 import MangaMain from "./MainComps/MainPage";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import MangaInfo from "./MainComps/MainPage/MangaPage";
+import MangaPage from "./MainComps/MainPage/MangaPage";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
     {
-        path: '/app',
-        element: <App/>
+        path: '/MangaPage/:id',
+        element: <MangaPage/>
     },
     {
         path: '/',
