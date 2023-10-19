@@ -1,8 +1,8 @@
 import {Button, Card, Space} from "antd";
 import React from "react";
 
-import {MangaList} from "../../../Data/MockApi";
 import {Link} from "react-router-dom";
+import {Genres} from "../Data/MockApi";
 
 
 const MangaCard = (props) => {
@@ -11,7 +11,7 @@ const MangaCard = (props) => {
     return (
         <Card>
             <Space direction="horizontal">
-            <p>{img}</p>
+            <img src={img} width="300"/>
             <div>
                 <h1>{name}</h1>
                 <p>Сценарист: {author} <br/>
@@ -20,7 +20,9 @@ const MangaCard = (props) => {
                 <p>Жанры:</p>
                 <Space direction="horizontal">
                     {genres.map((element) => (
+                        <Link to={"/genre/" + Genres.find((g) => g.genre==element)?.id}>
                         <p>{element}</p>
+                        </Link>
                     ))}
                 </Space>
                 <p>Описание:</p>
