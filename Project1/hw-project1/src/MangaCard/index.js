@@ -2,7 +2,7 @@ import {Button, Card, Space} from "antd";
 import React from "react";
 
 import {Link} from "react-router-dom";
-import {Genres} from "../Data/MockApi";
+import {Genres} from "../Data/MockApi.js";
 
 
 const MangaCard = (props) => {
