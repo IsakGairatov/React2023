@@ -11,7 +11,7 @@ const MangaCard = (props) => {
     return (
         <Card>
             <Space direction="horizontal">
-            <img src={img} width="300"/>
+            <img src={img} alt={""} width="300"/>
             <div>
                 <h1>{name}</h1>
                 <p>Сценарист: {author} <br/>
@@ -20,7 +20,7 @@ const MangaCard = (props) => {
                 <p>Жанры:</p>
                 <Space direction="horizontal">
                     {genres.map((element) => (
-                        <Link to={"/genre/" + Genres.find((g) => g.genre==element)?.id}>
+                        <Link to={"/genre/" + Genres.find((g) => g.genre===element)?.id}>
                         <p>{element}</p>
                         </Link>
                     ))}

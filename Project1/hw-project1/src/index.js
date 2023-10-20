@@ -8,6 +8,7 @@ import MangaMain from "./MainPage";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MangaPage from "./MangaPage/MangaPage";
 import Genrelist from "./GenreList/genrelist";
+import LogRegPage from "./LogReg/LogRegPage";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: '/genre/:id',
         element: <Genrelist/>
+    },
+    {
+        path: '/signupin/:mode',
+        element: <LogRegPage/>
     }
 ]);
 

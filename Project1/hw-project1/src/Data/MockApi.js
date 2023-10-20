@@ -1,3 +1,8 @@
+import {toArray} from "antd/es/form/util";
+import {json} from "react-router-dom";
+
+import "./Jsons/Db.json"
+
 export const MangaList = [
   {
     "id": 1,
@@ -86,8 +91,92 @@ export const CharactersList = [
     id: 2,
     characters: [
       {id: 1,
-      name: "Сет",
-      imgl: "dushusdhuhf"}
+      name: "Нодзоми Аидзава",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/140243/preview-764d9aaf40abd9ec654faa28a723d661.webp"},
+      {id: 2,
+        name: "Сиро Адзума",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/140244/preview-912dd2374312a3353b938b797f7b3d0f.webp"}
+    ]
+  },
+  {
+    id: 3,
+  characters: [
+    {id: 1,
+    name: "Асума Муцуми",
+    imgl: "https://desu.shikimori.one/uploads/poster/characters/103335/preview-b3b31f8808975d62b02abb645f06647a.webp"},
+    {id: 2,
+      name: "Хаято Шиномия",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/103341/preview-72080677568c615a9b8527be8116cbae.webp"},
+    {id: 3,
+      name: "Каэ Сэринума",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/103333/preview-af16fa1b65b47cc42e13318857b71c28.webp"},
+    {id: 4,
+      name: "Нозому Нанашима",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/103339/preview-3b23678b283a2290f711cce101a90c7d.webp"},
+    {id: 5,
+      name: "Шима Нишина",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/130094/preview-d6e212e60c3326f5ba9917543f145d46.webp"},
+    {id: 6,
+      name: "Юскэ Игараши",
+      imgl: "https://desu.shikimori.one/uploads/poster/characters/103337/preview-9c9c4bfc39695af7e490e84e537e2f4a.webp"}
+
+  ]
+  },
+  {
+    id: 4,
+    characters: [
+      {id: 1,
+        name: "Альбедо",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/116275/preview-7c89c26a7b0d0df5bb13f500bbc8ac82.webp"},
+      {id: 2,
+        name: "Момонга",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/116281/preview-6eb30ff64b355e243339c3c89a6890f2.webp"}
+    ]
+  },
+  {
+    id: 5,
+    characters: [
+      {id: 1,
+        name: "Алан Стюарт",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166520/preview-e82bbba8ee167120411e691a3cf990f7.webp"},
+      {id: 2,
+        name: "Катарина Клаес",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/159166/preview-b8c10e7553a7312895a96312f8645953.webp"},
+      {id: 3,
+        name: "Джордо Стюарт",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166519/preview-1dd3851ca7619b50182cde0f9fe98f3d.webp"},
+      {id: 4,
+        name: "Кит Клаес",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166521/preview-851709e215910ba49265ce98c79c9c7a.webp"},
+      {id: 5,
+        name: "Мария Кэмпбелл",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166523/preview-8bf2532c02c52b80dfa053c75a53795d.webp"},
+      {id: 6,
+        name: "Мэри Хант",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166525/preview-fe759befef13c774e30edaa2517c5402.webp"},
+      {id: 7,
+        name: "Николь Аскарт",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166522/preview-e1c1856f86b83983d51807fc83a5c26f.webp"},
+      {id: 8,
+        name: "София Аскарт",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/166526/preview-fdfe40df3d5ab531632950cb69407f5a.webp"}
+    ]
+  },
+  {
+    id: 6,
+    characters: [
+      {id: 1,
+        name: "Аква",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/117223/preview-93e241b9868e776045cb4b28ffcf3223.webp"},
+      {id: 2,
+        name: "Казума Сато",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/117221/preview-0a7684b586e8b42e40d04eb2c5877587.webp"},
+      {id: 3,
+        name: "Лалатина Дастинесс Форд",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/117285/preview-cd035b47829233fccae6e4c97edaeb99.webp"},
+      {id: 4,
+        name: "Мэгумин",
+        imgl: "https://desu.shikimori.one/uploads/poster/characters/117225/preview-637ba4b880519922dcdaaa6c0b2d9a9a.webp"},
     ]
   }
   ];
@@ -120,4 +209,7 @@ export const CharactersList = [
 ]
 
 
+const Db = require("./Jsons/Db.json")
 
+export const Users = Db.Users
+export var x = 1

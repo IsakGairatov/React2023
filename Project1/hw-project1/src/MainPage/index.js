@@ -7,9 +7,9 @@ import {Space} from "antd";
 const MangaMain = () => {
     const [mangas, setMangas] = useState(MangaList);
     const search = (event) => {
-        var text = event.target.value
+        var text = event.target.value.toLowerCase()
         setMangas(MangaList.filter((m) => (
-            m.name.match(text) || m.artist.match(text) || m.author.match(text) || m.year.match(text) || m.desc.match(text)
+            m.name.toLowerCase().match(text) || m.artist.toLowerCase().match(text) || m.author.toLowerCase().toLowerCase().match(text) || m.year.match(text) || m.desc.match(text)
         )))
     };
 
