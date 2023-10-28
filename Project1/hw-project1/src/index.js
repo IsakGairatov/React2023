@@ -9,6 +9,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MangaPage from "./MangaPage/MangaPage";
 import Genrelist from "./GenreList/genrelist";
 import LogRegPage from "./LogReg/LogRegPage";
+import MyPage from "./Mypage/Mypage";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
     {
         path: '/signupin/:mode',
         element: <LogRegPage/>
+    },
+    {
+        path: '/myPage',
+        element: <MyPage/>
     }
 ]);
 

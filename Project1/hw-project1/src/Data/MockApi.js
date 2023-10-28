@@ -2,6 +2,7 @@ import {toArray} from "antd/es/form/util";
 import {json} from "react-router-dom";
 
 import "./Jsons/Db.json"
+import {useState} from "react";
 
 export const MangaList = [
   {
@@ -212,4 +213,4 @@ export const CharactersList = [
 const Db = require("./Jsons/Db.json")
 
 export const Users = Db.Users
-export var x = 1
+

@@ -8,7 +8,9 @@ import Hat from "../MainPage/Hat";
 const GenreList = () => {
     let {id} = useParams();
     return ( <>
-            <Hat/>
+            <Hat/><br/>
+
+            <h1>Жанр {Genres[id - 1].genre}:</h1>
             {MangaList.filter((ml) => ml.genres.includes(Genres.find((g) => g.id==id).genre)).map((element) => (
                 <MangaCard
                     {...element}

@@ -1,15 +1,20 @@
 import {Card, Input, Space} from "antd";
 import {Button} from "antd/lib";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
+    const goToMainPage = () => navigate('/');
 
     function login() {
         if(localStorage.getItem("name") == document.getElementById("logName").value &
             localStorage.getItem("password") == document.getElementById("logPassword").value
         ) {
-
+            localStorage.setItem("isLog", "1")
+            goToMainPage()
         }
     }
 

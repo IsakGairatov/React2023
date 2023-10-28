@@ -2,13 +2,19 @@ import {Card, Input, Space} from "antd";
 import {Button} from "antd/lib";
 import {Users} from "../Data/MockApi";
 import {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Regin = () => {
+    const navigate = useNavigate();
+    const GoToLogPage = () => navigate('/signupin/1')
 
     function reg() {
-        localStorage.setItem("name", document.getElementById("regName").value)
-        localStorage.setItem("password", document.getElementById("regPassword").value)
+        if(document.getElementById("regName").value != "" && document.getElementById("regPassword").value != "") {
+            localStorage.setItem("name", document.getElementById("regName").value)
+            localStorage.setItem("password", document.getElementById("regPassword").value)
+            GoToLogPage()
+        }
+
         }
 
     return ( <>
