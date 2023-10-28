@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import HomePage from "./Components/Home";
+import Lenta from "./Components/Lenta";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <HomePage/>
+    },
+    {
+        path: 'Posts',
+        element: <Lenta/>
     }
 ]);
 
