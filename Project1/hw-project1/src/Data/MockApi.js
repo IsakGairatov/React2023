@@ -72,7 +72,7 @@ export const MangaList = [
 
 export const CharactersList = [
   {
-    id: 1,
+    id: "2dHg725a2ytCEEYmI5SR",
     characters: [
       { id: 1,
         name: "Сет",
@@ -89,7 +89,7 @@ export const CharactersList = [
     ]
   },
   {
-    id: 2,
+    id: "8ZNdL6RedLe3snPgVVOh",
     characters: [
       {id: 1,
       name: "Нодзоми Аидзава",
@@ -100,7 +100,7 @@ export const CharactersList = [
     ]
   },
   {
-    id: 3,
+    id: "G2VWqR80pSigQbduaWvP",
   characters: [
     {id: 1,
     name: "Асума Муцуми",
@@ -124,7 +124,7 @@ export const CharactersList = [
   ]
   },
   {
-    id: 4,
+    id: "dliR0MfzhMLVGa77cifg",
     characters: [
       {id: 1,
         name: "Альбедо",
@@ -135,7 +135,7 @@ export const CharactersList = [
     ]
   },
   {
-    id: 5,
+    id: "l8GA4NNzvRYM4VvpLKiX",
     characters: [
       {id: 1,
         name: "Алан Стюарт",
@@ -164,7 +164,7 @@ export const CharactersList = [
     ]
   },
   {
-    id: 6,
+    id: "gBghvf2mzcBuhhlTAVEP",
     characters: [
       {id: 1,
         name: "Аква",

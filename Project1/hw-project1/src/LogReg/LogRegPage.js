@@ -14,6 +14,7 @@ const LogRegPage = () => {
                 <Hat/>
             </Space>
 
+
             <div style={{textAlign: "center", marginTop: 200}}>
                 {mode == 1 ? (<Login/>): <></>}
                 {mode == 2 ? (<Reg/>) : <></>}

@@ -1,8 +1,9 @@
-import {Button, Card, Space} from "antd";
+import {Button, Card, Image, Space} from "antd";
 import React from "react";
 
 import {Link} from "react-router-dom";
 import {Genres} from "../Data/MockApi.js";
+
 
 
 const MangaCard = (props) => {
@@ -37,5 +38,7 @@ const MangaCard = (props) => {
         </Card>
     );
 };
+
+
 
 export default MangaCard;
