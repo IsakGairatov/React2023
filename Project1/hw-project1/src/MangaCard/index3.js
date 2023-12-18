@@ -13,7 +13,7 @@ const MangaCard3 = (props) => {
     const nav = useNavigate()
     const del = async() => {
         try {
-            await deleteDoc(doc(db, "MangaofUsers", id + auth.currentUser.email));
+            await deleteDoc(doc(db, "MangaofUsers", id + auth.currentUser?.email));
             nav('/')
         } catch (err) {
             console.log(err)

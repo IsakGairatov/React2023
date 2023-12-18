@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import {Genres} from "../Data/MockApi";
 import MangaCard3 from "../MangaCard/index3";
 import Hat from "../MainPage/Hat";
+import AdPage from "../Ad/AdPage";
 
 const MyPage = () => {
     const mangaCollectionRef = collection(db, "MangaList")
@@ -43,11 +44,12 @@ const MyPage = () => {
 
     useEffect(() => {
         getMangaList();
-        getUM()
+        getUM();
     }, [])
 
     return (
         <div>
+            <AdPage/>
             <Hat/>
             <h1>Ваш Email: {auth.currentUser.email
             }</h1>

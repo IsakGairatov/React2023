@@ -6,11 +6,11 @@ import {auth, db} from "../Firebs/FireBaser";
 
 const MangaCard2 = (props) => {
     const { id, name, img, author, artist, year, desc, genres } = props;
-    const UserUMRef = doc(db, "MangaofUsers", id + auth.currentUser.email)
+    const UserUMRef = doc(db, "MangaofUsers", id + auth.currentUser?.email)
     const save = async() => {
         try {
            await setDoc(UserUMRef, {
-               User : auth.currentUser.email,
+               User : auth.currentUser?.email,
                MangaId : id
            });
         } catch (err) {

@@ -9,6 +9,7 @@ import {collection, doc, getDoc, getDocs} from "firebase/firestore";
 import {db} from "../Firebs/FireBaser";
 import Comment from "./comments";
 import CommentWriter from "./commentWrite";
+import AdPage from "../Ad/AdPage";
 
 
 
@@ -60,7 +61,8 @@ const MangaPage = () => {
     ))
 
     return (
-        <>  <Hat/>
+        <>  <AdPage/>
+            <Hat/>
             {manga.map((element) => (
                 <MangaCard2
                     {...element}

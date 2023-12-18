@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {MangaList} from "../Data/MockApi.js";
 import MangaCard from "../MangaCard";
 import Hat from "./Hat";
+import AdPage from "../Ad/AdPage";
 import {Space} from "antd";
 import {getDocs, collection, addDoc} from "firebase/firestore"
 import {db} from "../Firebs/FireBaser";
@@ -62,8 +63,10 @@ const MangaMain = () => {
 
 
 
+
     return ( <>
             <Space direction={"vertical"}>
+                <AdPage/>
                 <Hat/>
                 <input placeholder="Название манги" onChange={search} size={100}/>
             </Space>

@@ -10,6 +10,7 @@ import MangaPage from "./MangaPage/MangaPage";
 import Genrelist from "./GenreList/genrelist";
 import LogRegPage from "./LogReg/LogRegPage";
 import MyPage from "./Mypage/Mypage";
+import Admaker from "./Ad/Admaker";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     {
         path: '/myPage',
         element: <MyPage/>
+    },
+    {
+        path: '/adMaker',
+        element: <Admaker/>
     }
 ]);
 
