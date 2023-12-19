@@ -51,3 +51,76 @@ Retrieve data about manga from Firebase, and save it into useState array Manga
 
 Retrieve data of all user's mangalists. Filter and get id's of all manga current user has in his list.
 
+## `GenreList component`
+
+If you click genre in manga post, you get to page with list of manga that has this genre.
+
+
+## `LogRegPage Component`
+
+Has two mode depending what number is param in url adress. 1 - Login, 2 - Register
+
+## Login component
+
+### login()
+
+Sign in account using firebase authentication. If it get response, you get to MangaMain. Elseway it catch error.
+
+## Reg component
+
+### signup()
+
+Create new account in Firebase. If it create, you get to MangaMain. Elseway it catch error
+
+## `Admaker component`
+
+Page to set and update the single ad data in Firebase that will appear in the top of every page.
+
+### done()
+
+update in Firebase image, url, title and description of ad using inputs from Admaker page.
+
+## AdPage component
+
+The model component for ad banner
+
+### getAd()
+
+Retrieve data from firebase about the single ad that will appear in the top of every page.
+
+
+## `Additional components`
+
+## FireBaser
+
+Configurations for FireBase initialization and access to data
+
+## Hat
+
+Every page has hat. It has two modes. If you are logged in, it has Home, Mypage and Log out title-buttons. Otherwise it has Home and LogIn title-buttons.
+
+### logout()
+
+Sign out from firebase account.
+
+## MangaCard
+
+Model of mangapost used in MangaMain
+
+It has image, manga name, author, artist, year, list of genres and description. Button "Подробнее" navigate you to MangaPage of this manga.
+
+## MangaCard2
+
+The same as MangaCard but instead of "Поподробнее" save button, that save this manga to your mangaList. Its used in MangaPage page.
+
+### save()
+
+Save into Firebase "MangaOfUsers" collection your email and manga id
+
+## MangaCard3
+
+The same as MangaCard but instead of "Поподробнее" delete button, that delete manga from your mangalist. Its used in MyPage page.
+
+## Characters
+
+Model of character used in MangaPage. Contain character image and name.
