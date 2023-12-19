@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# MangaSiteApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `MangaMain component`
 
-## Available Scripts
+Main page with list of manga and search
 
-In the project directory, you can run:
+### getMangaList() 
 
-### `npm start`
+Retrieve data about manga from Firebase, and save it into useState arrays mList and Manga
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### search()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Using Regular Expressions search manga from mList array. Search text match in title, artist and author name, year and words in description. Set mathching elements into main array mangas
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## `MangaPage component`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Page with manga characters, chapters. Here you also can add manga to your list and leave comment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### getManga()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Retrieve data about manga from Firebase, and save it into useState array Manga
 
-### `npm run eject`
+### getComs()
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Retrieve data of comments regarding manga from Fireabase
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## commentWrite component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Used in MangaPage Component to write comments.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### write()
 
-## Learn More
+Add comment to Firebase firestore. Comment contain your email, date and text.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## comment component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Used in MangaPage Component as model of comment
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## `MyPage component`
 
-### Analyzing the Bundle Size
+Shows your email and your manga list. Every manga has delete button and if you push manga cover you would get to mangaPage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### getMangaList()
 
-### Making a Progressive Web App
+Retrieve data about manga from Firebase, and save it into useState array Manga
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### getUM()
 
-### Advanced Configuration
+Retrieve data of all user's mangalists. Filter and get id's of all manga current user has in his list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
